@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to WhatsApp | MD2WA</title>
+    <meta name="description"
+        content="Konversi output markdown dari ChatGPT, Claude, Gemini menjadi format yang rapih untuk WhatsApp">
+    <meta name="theme-color" content="#0d1117">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Markdown to WhatsApp">
+    <meta property="og:description" content="Konversi markdown LLM ke format WhatsApp yang bersih">
+    <meta property="og:type" content="website">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">📝</span>
+                <h1>Markdown to WhatsApp</h1>
+            </div>
+            <p class="tagline">Konversi output LLM ke format WhatsApp</p>
+        </header>
+
+        <!-- Input Section -->
+        <section class="section">
+            <div class="section-header">
+                <label for="input" class="label">Input Markdown</label>
+                <span class="word-count" id="wordCount">0 kata</span>
+            </div>
+            <textarea id="input" class="textarea" placeholder="Paste teks markdown dari ChatGPT, Claude, Gemini, dsb..."
+                spellcheck="false"></textarea>
+        </section>
+
+        <!-- Action Buttons -->
+        <section class="actions">
+            <button id="btnProcess" class="btn btn-primary">
+                <span class="btn-icon">⚡</span>
+                Proses
+            </button>
+            <button id="btnCopy" class="btn btn-secondary">
+                <span class="btn-icon">📋</span>
+                Copy
+            </button>
+            <button id="btnShare" class="btn btn-success">
+                <span class="btn-icon">💬</span>
+                Share WA
+            </button>
+            <button id="btnClear" class="btn btn-ghost">
+                <span class="btn-icon">🗑️</span>
+                Clear
+            </button>
+        </section>
+
+        <!-- Status -->
+        <div id="status" class="status"></div>
+
+        <!-- Output Section -->
+        <section class="section">
+            <div class="section-header">
+                <label class="label">Output (WhatsApp Ready)</label>
+                <span class="hint">Klik untuk select all</span>
+            </div>
+            <div id="outputContainer" class="output-container">
+                <div id="output" class="output"></div>
+            </div>
+        </section>
+
+        <!-- Shortcuts Hint -->
+        <div class="shortcuts">
+            <span class="shortcut"><kbd>Ctrl</kbd>+<kbd>Enter</kbd> Proses</span>
+            <span class="shortcut"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> Copy</span>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with ❤️ by <a href="https://github.com/queery-id" target="_blank">queery-id</a></p>
+            <p class="version">v2.0</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Dependency directories (if any added later)
+node_modules/
+
+# Build outputs (if any added later)
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.temp
