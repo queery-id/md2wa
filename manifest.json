@@ -1,9 +1,8 @@
 {
     "name": "Markdown to WhatsApp",
     "short_name": "MD2WA",
-    "description": "Convert LLM markdown output to WhatsApp-friendly format",
+    "description": "Konversi output markdown dari LLM ke format WhatsApp",
     "start_url": "./",
-    "scope": "./",
     "display": "standalone",
     "background_color": "#0d1117",
     "theme_color": "#0d1117",

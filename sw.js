@@ -1,17 +1,19 @@
 /**
  * Service Worker for MD2WA
  * Enables offline functionality
+ * Deployed at: benkdash.my.id/cleaner/
  */
 
-const CACHE_NAME = 'md2wa-v3';
+const CACHE_NAME = 'md2wa-v4';
+const BASE_PATH = '/cleaner';
 const ASSETS = [
-    './',
-    './index.html',
-    './style.css',
-    './app.js',
-    './manifest.json',
-    './icons/icon-192.png',
-    './icons/icon-512.png'
+    `${BASE_PATH}/`,
+    `${BASE_PATH}/index.html`,
+    `${BASE_PATH}/style.css`,
+    `${BASE_PATH}/app.js`,
+    `${BASE_PATH}/manifest.json`,
+    `${BASE_PATH}/icons/icon-192.png`,
+    `${BASE_PATH}/icons/icon-512.png`
 ];
 
 // Install event - cache assets
@@ -43,8 +45,10 @@ self.addEventListener('fetch', (event) => {
             .catch(() => {
                 // Fallback for navigation requests
                 if (event.request.mode === 'navigate') {
-                    return caches.match('./index.html');
+                    return caches.match(`${BASE_PATH}/index.html`);
                 }
             })
     );
 });
+
+

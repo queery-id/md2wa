@@ -82,6 +82,8 @@ const conversionRules = [
     { name: 'hrDash', pattern: /^\s*-{3,}\s*$/gm, replacement: '_____' },
     { name: 'hrAsterisk', pattern: /^\s*\*{3,}\s*$/gm, replacement: '_____' },
     { name: 'hrUnderscore', pattern: /^\s*_{3,}\s*$/gm, replacement: '_____' },
+    // Add blank line after separator when followed by text
+    { name: 'hrSpacing', pattern: /^(_____)\r?\n(?=[^\n\r])/gm, replacement: '$1\n\n' },
 
     // --- URL Cleanup ---
     // Clean Amazon S3 URLs (remove AWS auth params)
